@@ -22,16 +22,22 @@ function viewCart() {
     return "Your shopping cart is empty."
   }
   else if(cart.length === 1){
-    return `In your cart, you have ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]}.`
+    return `In your cart, you have ${Object.keys(cart[0])} at 
+    $${cart[0][Object.keys(cart[0])]}.`
   }
   else if(cart.length === 2){
-    return `In your cart, you have ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]} and {Object.keys(cart[1])} at $${cart[1][Object.keys(cart[1])]}.`
+    return `In your cart, you have ${Object.keys(cart[0])} at 
+    $${cart[0][Object.keys(cart[0])]} and {Object.keys(cart[1])} at 
+    $${cart[1][Object.keys(cart[1])]}.`
   }
   else{
     for(var i = 0; i < cart.length - 1; i++){
-      cartItem.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`);
+      cartItem.push(`${Object.keys(cart[i])} at 
+      $${cart[i][Object.keys(cart[i])]}`);
     }
-    return `In your cart, you have ${cartItem}, and ${Object.keys(cart[cart.length - 1])} at $${cart[cart.length - 1][Object.keys(cart[cart.length - 1])]}.`
+    return `In your cart, you have ${cartItem}, and 
+    ${Object.keys(cart[cart.length - 1])} at 
+    $${cart[cart.length - 1][Object.keys(cart[cart.length - 1])]}.`
   }
 }
 
@@ -56,7 +62,8 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   if(cardNumber){
-    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
+    return `Your total cost is $${total()}, which will be charged to the 
+    card ${cardNumber}.`
     for(var i = cart.length; i >= 0; i--){
       cart.pop();
     }
